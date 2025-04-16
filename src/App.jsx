@@ -4,8 +4,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import MainLayout from './layouts/MainLayout';
 import ErrorBoundary from './components/ErrorBoundary';
 import LoadingSpinner from './components/LoadingSpinner';
-import SEO from './components/SEO';
-import { useServiceWorker } from './hooks/useServiceWorker';
 
 // Lazy load de las páginas
 const Home = lazy(() => import('./pages/Home'));
@@ -27,7 +25,6 @@ const ScrollToTop = () => {
 };
 
 const App = memo(() => {
-  useServiceWorker();
   const pageTransition = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
@@ -36,7 +33,7 @@ const App = memo(() => {
   };
 
   return (
-    <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+    <Router>
       <ErrorBoundary>
         <MainLayout>
           <ScrollToTop />
