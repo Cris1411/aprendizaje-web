@@ -1,0 +1,152 @@
+/* Variables de color para modo claro y oscuro */
+:root {
+    --color-fondo-claro: #ffffff;
+    --color-texto-claro: #333;
+    --color-fondo-oscuro: #333;
+    --color-texto-oscuro: #ffffff;
+    --color-background: var(--color-fondo-claro);
+    --color-text: var(--color-texto-claro);
+    --color-background-alt: #f7f7f7;
+    --color-primary: #4a90e2;
+    --color-primary-light: #87ceeb;
+    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    --spacing-md: 10px;
+    --spacing-lg: 20px;
+    --spacing-sm: 5px;
+    --border-radius-md: 5px;
+    --transition-normal: 0.3s ease;
+    --navbar-height: 64px;
+    --navbar-padding: 1rem 2rem;
+    --navbar-brand-size: 1.5rem;
+    --navbar-link-size: 0.95rem;
+    --color-border: #ccc;
+    --color-background-elevated: #f0f0f0;
+}
+
+/* Modo claro */
+.modo-claro .navbar {
+    background-color: var(--color-fondo-claro);
+    color: var(--color-texto-claro);
+}
+
+/* Modo oscuro */
+.modo-oscuro .navbar {
+    background-color: var(--color-fondo-oscuro);
+    color: var(--color-texto-oscuro);
+}
+
+/* Estilos para el Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: var(--color-background);
+  box-shadow: var(--shadow-sm);
+  padding: var(--navbar-padding);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--navbar-height);
+}
+
+.navbar-brand {
+  font-size: var(--navbar-brand-size);
+  font-weight: 600;
+  color: var(--color-text);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.navbar-brand:hover {
+  color: var(--color-primary);
+}
+
+.navbar-links {
+  display: flex;
+  gap: var(--spacing-lg);
+  align-items: center;
+}
+
+.navbar-link {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: var(--navbar-link-size);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  transition: all var(--transition-normal);
+}
+
+.navbar-link:hover {
+  color: var(--color-primary);
+  background-color: var(--color-background-alt);
+}
+
+.navbar-link.active {
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--spacing-sm);
+  color: var(--color-text);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    padding: var(--spacing-md);
+  }
+
+  .navbar-container {
+    height: auto;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: var(--color-background);
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-link {
+    width: 100%;
+    text-align: center;
+    padding: var(--spacing-md);
+  }
+}
+
+/* Dark mode */
+[data-theme='dark'] .navbar {
+  background-color: var(--color-background);
+  border-color: var(--color-border);
+}
+
+[data-theme='dark'] .navbar-link:hover {
+  background-color: var(--color-background-elevated);
+}

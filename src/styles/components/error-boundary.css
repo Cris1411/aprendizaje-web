@@ -1,0 +1,35 @@
+/* Estilos para el componente ErrorBoundary */
+.error-container {
+  padding: var(--spacing-xl);
+  text-align: center;
+  background-color: var(--color-error-bg, #fff1f2);
+  border: 1px solid var(--color-error-border, #fecdd3);
+  border-radius: var(--border-radius-lg);
+  margin: var(--spacing-lg) auto;
+  max-width: 600px;
+}
+
+.error-title {
+  color: var(--color-error, #be123c);
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.error-message {
+  color: var(--color-error-dark, #881337);
+  margin-bottom: var(--spacing-lg);
+}
+
+.error-button {
+  background-color: var(--color-error, #be123c);
+  color: white;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--border-radius-md);
+  border: none;
+  cursor: pointer;
+  transition: background-color var(--transition-normal, 0.2s);
+}
+
+.error-button:hover {
+  background-color: var(--color-error-dark, #9f1239);
+}
