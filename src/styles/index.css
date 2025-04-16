@@ -83,6 +83,74 @@ body {
   transition: background-color var(--transition-normal), color var(--transition-normal);
 }
 
+[data-theme='dark'] body {
+  background-color: #111827;
+  color: #f8fafc;
+}
+
+[data-theme='dark'] .container,
+[data-theme='dark'] .main-content,
+[data-theme='dark'] .page-container {
+  background-color: #181f2a !important;
+  color: #e5e7eb !important;
+}
+
+[data-theme='dark'] h1,
+[data-theme='dark'] h2,
+[data-theme='dark'] h3,
+[data-theme='dark'] h4,
+[data-theme='dark'] h5,
+[data-theme='dark'] h6 {
+  color: #f8fafc !important;
+}
+
+[data-theme='dark'] .navbar {
+  background-color: #1e293b !important;
+  color: #f8fafc !important;
+  border-bottom: 1px solid #334155 !important;
+}
+
+[data-theme='dark'] .navbar-link,
+[data-theme='dark'] .footer-link {
+  color: #a5b4fc !important;
+}
+
+[data-theme='dark'] .footer {
+  background-color: #181f2a !important;
+  color: #e5e7eb !important;
+}
+
+[data-theme='dark'] .card,
+[data-theme='dark'] .feature-card,
+[data-theme='dark'] .tech-section {
+  background-color: #232c3b !important;
+  color: #f1f5f9 !important;
+  border-color: #334155 !important;
+}
+
+[data-theme='dark'] .code-block {
+  background: #1e293b !important;
+  color: #f8fafc !important;
+  border-color: #334155 !important;
+}
+
+[data-theme='dark'] .tech-card-title,
+[data-theme='dark'] .feature-card h3 {
+  color: #a5b4fc !important;
+}
+
+[data-theme='dark'] .card-description,
+[data-theme='dark'] .page-description,
+[data-theme='dark'] .feature-card p {
+  color: #cbd5e1 !important;
+}
+
+[data-theme='dark'] pre,
+[data-theme='dark'] code {
+  background: transparent !important;
+  color: #f8fafc !important;
+}
+
 /* Transiciones globales para el cambio de tema */
 [data-theme] * {
   transition: background-color var(--transition-normal),

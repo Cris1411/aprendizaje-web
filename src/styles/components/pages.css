@@ -104,6 +104,40 @@
   color: var(--color-text);
 }
 
+/* Modo oscuro */
+[data-theme='dark'] .page-container {
+  background-color: var(--color-background-alt);
+  color: var(--color-text-light);
+}
+
+[data-theme='dark'] .tech-section {
+  background: #232c3b;
+  border: 1px solid #334155;
+  color: #f8fafc;
+}
+
+[data-theme='dark'] .tech-section h2 {
+  color: #a5b4fc;
+}
+
+[data-theme='dark'] .code-block {
+  background: #1e293b;
+  color: #f8fafc;
+  border-color: #334155;
+}
+
+[data-theme='dark'] .code-block pre {
+  color: var(--color-text);
+}
+
+[data-theme='dark'] .page-title {
+  color: #a5b4fc;
+}
+
+[data-theme='dark'] .page-description {
+  color: #cbd5e1;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .page-container {

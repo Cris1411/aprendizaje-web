@@ -103,6 +103,38 @@
   color: var(--color-text);
 }
 
+/* --- DARK MODE NAVBAR --- */
+[data-theme='dark'] .navbar,
+[data-theme='dark'] .navbar-container {
+  background-color: #1e293b !important;
+  color: #f8fafc !important;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.15);
+}
+[data-theme='dark'] .navbar-brand,
+[data-theme='dark'] .navbar-logo {
+  color: #f8fafc !important;
+}
+[data-theme='dark'] .navbar-link {
+  color: #f8fafc !important;
+  background: transparent !important;
+}
+[data-theme='dark'] .navbar-link.active {
+  color: #a5b4fc !important;
+  background: rgba(139, 92, 246, 0.18) !important;
+  font-weight: 600;
+}
+[data-theme='dark'] .navbar-link:hover,
+[data-theme='dark'] .navbar-link:focus {
+  color: #a5b4fc !important;
+  background: rgba(139, 92, 246, 0.10) !important;
+  border-radius: 6px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  transition: background 0.2s, color 0.2s;
+}
+[data-theme='dark'] .menu-toggle {
+  color: #f8fafc !important;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .navbar {
@@ -139,14 +171,4 @@
     text-align: center;
     padding: var(--spacing-md);
   }
-}
-
-/* Dark mode */
-[data-theme='dark'] .navbar {
-  background-color: var(--color-background);
-  border-color: var(--color-border);
-}
-
-[data-theme='dark'] .navbar-link:hover {
-  background-color: var(--color-background-elevated);
 }
