@@ -160,6 +160,7 @@
     padding: var(--spacing-md);
     border-bottom: 1px solid var(--color-border);
     box-shadow: var(--shadow-sm);
+    transition: background-color var(--transition-normal);
   }
 
   .navbar-links.active {
@@ -170,5 +171,12 @@
     width: 100%;
     text-align: center;
     padding: var(--spacing-md);
+  }
+
+  /* Modo oscuro para el menú desplegable */
+  [data-theme='dark'] .navbar-links {
+    background-color: #1e293b !important;
+    color: #f8fafc !important;
+    border-bottom: 1px solid #374151 !important;
   }
 }
